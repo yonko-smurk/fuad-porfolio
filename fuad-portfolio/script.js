@@ -63,19 +63,15 @@ function setupBackToTop() {
  */
 function setupOffcanvasNav() {
   const offcanvasElement = document.getElementById("offcanvasNavbar");
-  if (!offcanvasElement) return;
+  const Offcanvas = window.bootstrap?.Offcanvas;
+  if (!offcanvasElement || !Offcanvas) return;
 
-  const bootstrapApi = window.bootstrap;
-  if (!bootstrapApi?.Offcanvas) return;
-
-  const links = offcanvasElement.querySelectorAll("a.nav-link[href]");
-  if (!links.length) return;
-
-  links.forEach((link) => {
+  const offcanvasInstance = Offcanvas.getOrCreateInstance(offcanvasElement);
+  offcanvasElement.querySelectorAll("a.nav-link[href]").forEach((link) => {
     link.addEventListener("click", () => {
-      if (!offcanvasElement.classList.contains("show")) return;
-      const offcanvasInstance = bootstrapApi.Offcanvas.getInstance(offcanvasElement);
-      offcanvasInstance?.hide();
+      if (offcanvasElement.classList.contains("show")) {
+        offcanvasInstance.hide();
+      }
     });
   });
 }
@@ -85,44 +81,33 @@ function setupOffcanvasNav() {
  * to filling them immediately.
  */
 function setupSkillBarAnimation() {
-  const bars = document.querySelectorAll(".progress-bar[data-skill-target]");
+  const bars = Array.from(document.querySelectorAll(".progress-bar[data-skill-target]"));
   if (!bars.length) return;
+
   const fillBars = () => {
     bars.forEach((bar) => {
       const target = Number(bar.getAttribute("data-skill-target"));
       if (Number.isNaN(target)) return;
       bar.style.width = `${target}%`;
       bar.setAttribute("aria-valuenow", String(target));
-      const container = bar.closest(".progress");
-      if (container) {
-        container.setAttribute("aria-valuenow", String(target));
-      }
     });
   };
-  // No IntersectionObserver support to animate immediately
-  if (!("IntersectionObserver" in window)) {
-    fillBars();
-    return;
-  }
+
   const skillsSection = document.getElementById("skills");
-  if (!skillsSection) {
+  if (!("IntersectionObserver" in window) || !skillsSection) {
     fillBars();
     return;
   }
+
   let hasAnimated = false;
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && !hasAnimated) {
-          hasAnimated = true;
-          fillBars();
-          observer.disconnect();
-        }
-      });
-    },
-    {
-      threshold: 0.3,
+  const observer = new IntersectionObserver((entries) => {
+    if (hasAnimated) return;
+    if (entries.some((entry) => entry.isIntersecting)) {
+      hasAnimated = true;
+      fillBars();
+      observer.disconnect();
     }
-  );
+  }, { threshold: 0.3 });
+
   observer.observe(skillsSection);
 }

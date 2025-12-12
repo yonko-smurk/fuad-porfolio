@@ -7,6 +7,15 @@
   --accent: #0d6efd;
   --accent-soft: #e7f0ff;
   --card-border: #dde1ea;
+  --surface-bg: #fff;
+  --surface-border: var(--card-border);
+  --surface-shadow: 0 10px 24px rgba(0, 0, 0, .08);
+  --surface-radius: 16px;
+  --surface-hover-bg: linear-gradient(135deg, #ffffff, #f7f9ff);
+  --surface-hover-border: rgba(13, 110, 253, .28);
+  --surface-hover-shadow: 0 16px 32px rgba(0, 0, 0, .12);
+  --surface-focus-border: rgba(13, 110, 253, .35);
+  --surface-focus-shadow: 0 16px 32px rgba(0, 0, 0, .12);
 }
 
 body {
@@ -252,51 +261,66 @@ section { scroll-margin-top: 80px; }
 #education .card-title { margin-bottom: .35rem; }
 #education .card-subtitle { font-size: .95rem; color: #6c757d; }
 
-#education .education-accordion .accordion-item {
-  border-radius: 16px;
-  border: 1px solid var(--card-border);
-  background: #fff;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, .08);
+/* ---------- Shared surface shells (cards/accordions) ---------- */
+#education .education-accordion .accordion-item,
+#experience .experience-accordion .accordion-item,
+#projects .card {
+  border-radius: var(--surface-radius);
+  border: 1px solid var(--surface-border);
+  background: var(--surface-bg);
+  box-shadow: var(--surface-shadow);
   overflow: hidden;
   transition: transform .2s, box-shadow .2s, border-color .2s, background .2s;
 }
 
-#education .education-accordion .accordion-item + .accordion-item {
+#education .education-accordion .accordion-item + .accordion-item,
+#experience .experience-accordion .accordion-item + .accordion-item {
   margin-top: 1rem;
 }
 
-#education .education-accordion .accordion-item:hover {
+#education .education-accordion .accordion-item:hover,
+#experience .experience-accordion .accordion-item:hover,
+#projects .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, .12);
-  border-color: rgba(13, 110, 253, .28);
-  background: linear-gradient(135deg, #ffffff, #f7f9ff);
+  box-shadow: var(--surface-hover-shadow);
+  border-color: var(--surface-hover-border);
+  background: var(--surface-hover-bg);
 }
 
-#education .education-accordion .accordion-item:focus-within {
-  border-color: rgba(13, 110, 253, .35);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, .12);
+#education .education-accordion .accordion-item:focus-within,
+#experience .experience-accordion .accordion-item:focus-within,
+#projects .card:focus-within {
+  border-color: var(--surface-focus-border);
+  box-shadow: var(--surface-focus-shadow);
   transform: translateY(-2px);
 }
 
-#education .education-accordion .accordion-button {
+#education .education-accordion .accordion-button,
+#experience .experience-accordion .accordion-button {
   background: transparent;
   padding: 1.25rem 1.25rem;
   align-items: flex-start;
 }
 
-#education .education-accordion .accordion-button:focus {
+#education .education-accordion .accordion-button:focus,
+#experience .experience-accordion .accordion-button:focus {
   box-shadow: 0 0 0 .15rem rgba(13, 110, 253, .18);
 }
 
-#education .education-accordion .accordion-button:not(.collapsed) {
+#education .education-accordion .accordion-button:not(.collapsed),
+#experience .experience-accordion .accordion-button:not(.collapsed) {
   color: inherit;
   background: rgba(13, 110, 253, .04);
   box-shadow: none;
 }
 
-#education .education-accordion .accordion-body {
+#education .education-accordion .accordion-body,
+#experience .experience-accordion .accordion-body {
   padding: 0 1.25rem 1.25rem;
 }
+
+#projects .card-subtitle,
+#experience .card-subtitle { color: #6c757d; }
 
 #education .education-header {
   display: flex;
@@ -313,55 +337,7 @@ section { scroll-margin-top: 80px; }
 /* ---------- Cards ---------- */
 .card-title { font-weight: 600; }
 
-/* ---------- Experience ---------- */
-#experience .card-subtitle { color: #6c757d; }
-
-#experience .experience-accordion .accordion-item {
-  border-radius: 16px;
-  border: 1px solid var(--card-border);
-  background: #fff;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, .08);
-  overflow: hidden;
-  transition: transform .2s, box-shadow .2s, border-color .2s, background .2s;
-}
-
-#experience .experience-accordion .accordion-item + .accordion-item {
-  margin-top: 1rem;
-}
-
-#experience .experience-accordion .accordion-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, .12);
-  border-color: rgba(13, 110, 253, .28);
-  background: linear-gradient(135deg, #ffffff, #f7f9ff);
-}
-
-#experience .experience-accordion .accordion-item:focus-within {
-  border-color: rgba(13, 110, 253, .35);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, .12);
-  transform: translateY(-2px);
-}
-
-#experience .experience-accordion .accordion-button {
-  background: transparent;
-  padding: 1.25rem 1.25rem;
-  align-items: flex-start;
-}
-
-#experience .experience-accordion .accordion-button:focus {
-  box-shadow: 0 0 0 .15rem rgba(13, 110, 253, .18);
-}
-
-#experience .experience-accordion .accordion-button:not(.collapsed) {
-  color: inherit;
-  background: rgba(13, 110, 253, .04);
-  box-shadow: none;
-}
-
-#experience .experience-accordion .accordion-body {
-  padding: 0 1.25rem 1.25rem;
-}
-
+/* ---------- Experience section ---------- */
 #experience .experience-header {
   display: flex;
   align-items: flex-start;
@@ -388,7 +364,6 @@ section { scroll-margin-top: 80px; }
   align-items: center;
   justify-content: center;
 }
-
 #experience .company-logo img {
   width: 100%;
   height: 100%;
@@ -396,9 +371,9 @@ section { scroll-margin-top: 80px; }
   transform: scale(1.1);
   display: block;
 }
-
-/* ---------- Hobbies ---------- */
-
+/* ---------- Projects ---------- */
+#projects { background: #f8f9fc; }
+/* ---------- Section backgrounds (light mode) ---------- */
 #hobbies,
 #about,
 #skills,
@@ -410,7 +385,7 @@ section { scroll-margin-top: 80px; }
     radial-gradient(circle at 80% 20%, rgba(92, 123, 255, 0.06), transparent 40%),
     linear-gradient(180deg, #f7f9fd, #f3f5fb) !important;
 }
-
+/* ---------- Hobbies section ---------- */
 #hobbies h2 {
   font-weight: 700;
   letter-spacing: -0.01em;
@@ -480,27 +455,6 @@ section { scroll-margin-top: 80px; }
   border-color: rgba(13, 110, 253, 0.35) !important;
 }
 
-/* ---------- Projects ---------- */
-#projects { background: #f8f9fc; }
-#projects .card {
-  border-radius: 16px;
-  border: 1px solid var(--card-border);
-  background: #fff;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, .08);
-  transition: transform .2s, box-shadow .2s, border-color .2s, background .2s;
-}
-#projects .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, .12);
-  border-color: rgba(13, 110, 253, .28);
-  background: linear-gradient(135deg, #ffffff, #f7f9ff);
-}
-#projects .card:focus-within {
-  border-color: rgba(13, 110, 253, .35);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, .12);
-  transform: translateY(-2px);
-}
-#projects .card-subtitle { color: #6c757d; }
 
 /* ---------- Skills ---------- */
 #skills .progress {
@@ -569,6 +523,14 @@ body.dark-mode {
   --text-main: #f8f9fa;
   --text-muted: #b0b3b8;
   --card-border: #343a40;
+  --surface-bg: #1b1f2a;
+  --surface-border: #2f3642;
+  --surface-shadow: 0 10px 24px rgba(0, 0, 0, .5);
+  --surface-hover-bg: linear-gradient(135deg, #1b1f2a, #181c28);
+  --surface-hover-border: rgba(92, 123, 255, .45);
+  --surface-hover-shadow: 0 16px 32px rgba(0, 0, 0, .6);
+  --surface-focus-border: rgba(92, 123, 255, .55);
+  --surface-focus-shadow: 0 16px 32px rgba(0, 0, 0, .65);
 }
 
 body.dark-mode .card {
@@ -661,41 +623,33 @@ body.dark-mode #about .about-dot::after {
   border-color: rgba(92, 123, 255, .55);
 }
 
-body.dark-mode #education .education-accordion .accordion-item {
-  background: #1b1f2a;
-  border-color: #2f3642;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, .5);
-}
-
-body.dark-mode #education .education-accordion .accordion-item:hover {
-  box-shadow: 0 16px 32px rgba(0, 0, 0, .6);
-  border-color: rgba(92, 123, 255, .45);
-  background: linear-gradient(135deg, #1b1f2a, #181c28);
-}
-
-body.dark-mode #education .education-accordion .accordion-item:focus-within {
-  border-color: rgba(92, 123, 255, .55);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, .65);
-  transform: translateY(-2px);
-}
-
-body.dark-mode #education .education-accordion .accordion-button {
+body.dark-mode #education .education-accordion .accordion-button,
+body.dark-mode #experience .experience-accordion .accordion-button {
   color: #ffffff;
 }
 
-body.dark-mode #education .education-accordion .accordion-body {
+body.dark-mode #education .education-accordion .accordion-body,
+body.dark-mode #experience .experience-accordion .accordion-body {
   color: #ffffff;
 }
 
-body.dark-mode #education .education-accordion .accordion-button::after {
+body.dark-mode #education .education-accordion .accordion-body li,
+body.dark-mode #experience .experience-accordion .accordion-body li {
+  color: inherit;
+}
+
+body.dark-mode #education .education-accordion .accordion-button::after,
+body.dark-mode #experience .experience-accordion .accordion-button::after {
   filter: invert(1);
 }
 
-body.dark-mode #education .education-accordion .accordion-button:not(.collapsed) {
+body.dark-mode #education .education-accordion .accordion-button:not(.collapsed),
+body.dark-mode #experience .experience-accordion .accordion-button:not(.collapsed) {
   background: rgba(92, 123, 255, .08);
 }
 
-body.dark-mode #experience .card-subtitle { color: #cfd6e2; }
+body.dark-mode #experience .card-subtitle,
+body.dark-mode #projects .card-subtitle { color: #cfd6e2; }
 
 body.dark-mode #experience .company-logo {
   background: rgba(255, 255, 255, 0.06);
@@ -703,44 +657,7 @@ body.dark-mode #experience .company-logo {
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.45);
 }
 
-body.dark-mode #experience .experience-accordion .accordion-item {
-  background: #1b1f2a;
-  border-color: #2f3642;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, .5);
-}
-
-body.dark-mode #experience .experience-accordion .accordion-item:hover {
-  box-shadow: 0 16px 32px rgba(0, 0, 0, .6);
-  border-color: rgba(92, 123, 255, .45);
-  background: linear-gradient(135deg, #1b1f2a, #181c28);
-}
-
-body.dark-mode #experience .experience-accordion .accordion-item:focus-within {
-  border-color: rgba(92, 123, 255, .55);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, .65);
-  transform: translateY(-2px);
-}
-
-body.dark-mode #experience .experience-accordion .accordion-button {
-  color: #ffffff;
-}
-
-body.dark-mode #experience .experience-accordion .accordion-body {
-  color: #ffffff;
-}
-
-body.dark-mode #experience .experience-accordion .accordion-body li {
-  color: inherit;
-}
-
-body.dark-mode #experience .experience-accordion .accordion-button::after {
-  filter: invert(1);
-}
-
-body.dark-mode #experience .experience-accordion .accordion-button:not(.collapsed) {
-  background: rgba(92, 123, 255, .08);
-}
-
+/* ---------- Section backgrounds (dark mode) ---------- */
 body.dark-mode #hobbies,
 body.dark-mode #about,
 body.dark-mode #skills,
@@ -774,24 +691,6 @@ body.dark-mode #hobbies .hobby-card:hover {
 }
 
 body.dark-mode #projects { background: #0f1118; }
-body.dark-mode #projects .card {
-  background: #1b1f2a;
-  border-color: #2f3642;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, .5);
-}
-body.dark-mode #projects .card-subtitle { color: #cfd6e2; }
-
-body.dark-mode #projects .card:hover {
-  border-color: rgba(92, 123, 255, .45);
-  background: linear-gradient(135deg, #1b1f2a, #181c28);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, .65);
-}
-
-body.dark-mode #projects .card:focus-within {
-  border-color: rgba(92, 123, 255, .55);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, .7);
-  transform: translateY(-2px);
-}
 
 body.dark-mode #skills .progress { background: #2c3240; }
 
@@ -813,7 +712,6 @@ body.dark-mode .modal-title { color: #e4e8f0; }
 body.dark-mode .btn-close {
   filter: invert(1) grayscale(100%) brightness(200%);
 }
-
 /* ---------- Responsive ---------- */
 @media (max-width: 767.98px) {
   #about .about-quick-row {
