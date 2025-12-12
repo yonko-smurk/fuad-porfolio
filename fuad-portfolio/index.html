@@ -1,0 +1,710 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fuad Mudashiru | Portfolio</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="dark-mode" data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="80" tabindex="0">
+
+  <!-- NAVBAR -->
+  <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-semibold" href="#hero">Fuad Mudashiru</a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar"
+        aria-label="Open navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div
+        class="offcanvas offcanvas-end offcanvas-lg text-bg-dark"
+        tabindex="-1"
+        id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="#hobbies">Hobbies</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="docs.html">CA Docs</a></li>
+          </ul>
+
+          <div class="d-lg-flex align-items-center ms-lg-3 mt-3 mt-lg-0">
+            <button id="themeToggle" class="btn btn-outline-light btn-sm" type="button">
+              Toggle theme
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero"
+    class="py-5 bg-light min-vh-100 d-flex align-items-center section-shell section text-center">
+    <div class="container py-5">
+      <div class="row flex-column align-items-center g-4">
+        <div class="col-12 col-md-10 col-lg-8 hero-copy mx-auto">
+          <h1 class="display-5 fw-bold mb-3">
+            Hi, I'm Fuad Mudashiru
+          </h1>
+          <p class="lead mb-2">Aspiring Software Developer</p>
+          <p class="text-muted mb-4">
+            Based in Dublin, Ireland. Interested in software development, DevOps, and cloud computing
+            from front-end and back-end development to troubleshooting complex technical problems.
+          </p>
+
+        </div>
+
+        <div class="col-12 d-flex justify-content-center">
+          <img
+            src="Gemini_Generated_Image_rv2mkcrv2mkcrv2m.png"
+            alt="Fuad Mudashiru portrait"
+            class="hero-avatar rounded-circle"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT me section -->
+  <section id="about" class="py-5 about-section section-shell ">
+    <div class="container">
+      <h2 class="mb-4 section-heading"><i class="bi bi-person me-2 align-middle" aria-hidden="true"></i>About Me</h2>
+      <div class="row g-4 align-items-start">
+        <div class="col-lg-8">
+          <div class="about-panel">
+            <p class="mb-3">
+              I am a 4th-year BSc Computing with Software Development student at TU Dublin, Tallaght campus.
+              My background combines software development with hands-on experience in cloud computing and DevOps.
+            </p>
+            <p class="mb-3">
+              I enjoy working across the full stack from building web applications to diagnosing and resolving
+              issues in live environments. I like troubleshooting complex problems, analysing logs and metrics, and
+              improving reliability through automation and clean, maintainable code.
+            </p>
+            <p class="mb-4">
+              I am aiming for roles in <strong>software development</strong> and
+              <strong>DevOps / cloud engineering</strong>, where I can keep learning, build reliable systems, and solve
+              real-world problems for users.
+            </p>
+            <div class="about-highlights d-flex flex-wrap gap-2 mt-2">
+              <span class="about-chip rounded-pill">DevOps &amp; Cloud</span>
+              <span class="about-chip rounded-pill">Full-stack delivery</span>
+              <span class="about-chip rounded-pill">Reliability &amp; observability</span>
+              <span class="about-chip rounded-pill">Automation-first</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="about-quick-card h-100">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <h6 class="text-uppercase mb-0">Quick Info</h6>
+              <span class="about-dot rounded-circle"></span>
+            </div>
+            <dl class="about-quick-list mb-0">
+              <div class="about-quick-row">
+                <dt>Location</dt>
+                <dd>Dublin, Ireland</dd>
+              </div>
+              <div class="about-quick-row">
+                <dt>Degree</dt>
+                <dd>BSc Computing with Software Development</dd>
+              </div>
+              <div class="about-quick-row">
+                <dt>Year</dt>
+                <dd>4th Year</dd>
+              </div>
+              <div class="about-quick-row">
+                <dt>Interests</dt>
+                <dd>DevOps, Cloud, Full-Stack</dd>
+              </div>
+              <div class="about-quick-row">
+                <dt>Target Roles</dt>
+                <dd>Software Developer, DevOps Engineer</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="py-5 bg-light section-shell">
+    <div class="container">
+      <h2 class="mb-4 section-heading"><i class="bi bi-mortarboard me-2 align-middle" aria-hidden="true"></i>Education</h2>
+      <p class="text-muted">
+        BSc in Computing with Software Development &ndash; Technological University Dublin, Tallaght Campus.
+      </p>
+
+      <div class="accordion education-accordion" id="educationAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="educationHeadingYear4">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#educationCollapseYear4"
+              aria-expanded="false"
+              aria-controls="educationCollapseYear4"
+            >
+              <div class="education-header">
+                <div class="education-meta">
+                  <h5 class="card-title mb-1">Year 4 &ndash; In Progress</h5>
+                  <p class="card-subtitle text-muted mb-0">Sept 2025 &ndash; May 2026 (Semester 1)</p>
+                </div>
+              </div>
+            </button>
+          </h2>
+          <div
+            id="educationCollapseYear4"
+            class="accordion-collapse collapse"
+            aria-labelledby="educationHeadingYear4"
+            data-bs-parent="#educationAccordion"
+          >
+            <div class="accordion-body">
+              <ul class="small mb-0">
+                <li>Software Architecture &ndash; <em>In progress</em></li>
+                <li>DevOps: Continuous Integration and Deployment &ndash; <em>In progress</em></li>
+                <li>Interactive Media Design &amp; Visualisation &ndash; <em>In progress</em></li>
+                <li>Final Project &ndash; <em>In progress</em></li>
+                <li>Enterprise Performance Architecture (Cross-listed) &ndash; <em>In progress</em></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="educationHeadingYear3">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#educationCollapseYear3"
+              aria-expanded="false"
+              aria-controls="educationCollapseYear3"
+            >
+              <div class="education-header">
+                <div class="education-meta">
+                  <h5 class="card-title mb-1">Year 3</h5>
+                  <p class="card-subtitle text-muted mb-0">Experiential Learning &amp; Advanced Computing Modules</p>
+                </div>
+              </div>
+            </button>
+          </h2>
+          <div
+            id="educationCollapseYear3"
+            class="accordion-collapse collapse"
+            aria-labelledby="educationHeadingYear3"
+            data-bs-parent="#educationAccordion"
+          >
+            <div class="accordion-body">
+              <ul class="small mb-0">
+                <li>Experiential Learning &ndash; <strong>PS</strong></li>
+                <li>Server-side Web Development &ndash; <strong>C</strong></li>
+                <li>Operating Systems &ndash; <strong>C</strong></li>
+                <li>Cloud Services &amp; Distributed Computing &ndash; <strong>C</strong></li>
+                <li>Big Data Technologies &ndash; <strong>C+</strong></li>
+                <li>Data Structures &amp; Algorithms &ndash; <strong>C</strong></li>
+                <li>Data Analysis &ndash; <strong>B</strong></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="educationHeadingYear2">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#educationCollapseYear2"
+              aria-expanded="false"
+              aria-controls="educationCollapseYear2"
+            >
+              <div class="education-header">
+                <div class="education-meta">
+                  <h5 class="card-title mb-1">Year 2</h5>
+                  <p class="card-subtitle text-muted mb-0">Core Computing &amp; Networking</p>
+                </div>
+              </div>
+            </button>
+          </h2>
+          <div
+            id="educationCollapseYear2"
+            class="accordion-collapse collapse"
+            aria-labelledby="educationHeadingYear2"
+            data-bs-parent="#educationAccordion"
+          >
+            <div class="accordion-body">
+              <ul class="small mb-0">
+                <li>Software Development 4 &ndash; <strong>C+</strong></li>
+                <li>Project &ndash; <strong>B</strong></li>
+                <li>Routing &amp; Switching Essentials &ndash; <strong>B-</strong></li>
+                <li>Management Science &ndash; <strong>C</strong></li>
+                <li>Database Administration &amp; Analysis &ndash; <strong>C+</strong></li>
+                <li>Information Security &ndash; <strong>C</strong></li>
+                <li>Software Development 3 &ndash; <strong>B</strong></li>
+                <li>Software Quality Assurance &amp; Testing &ndash; <strong>B+</strong></li>
+                <li>Network Fundamentals &ndash; <strong>B-</strong></li>
+                <li>Advanced Database Technologies &ndash; <strong>B</strong></li>
+                <li>Discrete Mathematics 2 &ndash; <strong>B+</strong></li>
+                <li>Client-side Web Development &ndash; <strong>C+</strong></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="educationHeadingYear1">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#educationCollapseYear1"
+              aria-expanded="false"
+              aria-controls="educationCollapseYear1"
+            >
+              <div class="education-header">
+                <div class="education-meta">
+                  <h5 class="card-title mb-1">Year 1</h5>
+                  <p class="card-subtitle text-muted mb-0">Core Foundations</p>
+                </div>
+              </div>
+            </button>
+          </h2>
+          <div
+            id="educationCollapseYear1"
+            class="accordion-collapse collapse"
+            aria-labelledby="educationHeadingYear1"
+            data-bs-parent="#educationAccordion"
+          >
+            <div class="accordion-body">
+              <ul class="small mb-0">
+                <li>Software Development 2 &ndash; <strong>B+</strong></li>
+                <li>Systems Analysis &ndash; <strong>C</strong></li>
+                <li>Social Media Communications &ndash; <strong>C+</strong></li>
+                <li>Statistics &ndash; <strong>C</strong></li>
+                <li>Database Fundamentals &ndash; <strong>B-</strong></li>
+                <li>Spanish &ndash; <strong>C</strong></li>
+                <li>Software Development 1 &ndash; <strong>B+</strong></li>
+                <li>Visual Design &amp; User Experience &ndash; <strong>B+</strong></li>
+                <li>Discrete Mathematics 1 &ndash; <strong>C</strong></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="py-5 section-shell">
+    <div class="container">
+      <h2 class="mb-4 section-heading"><i class="bi bi-code-slash me-2 align-middle" aria-hidden="true"></i>Projects</h2>
+
+      <div class="row g-4">
+        <!-- Django E-commerce -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Django E-commerce Website</h5>
+              <h6 class="card-subtitle text-muted mb-2">Year 2 &ndash; Team Project</h6>
+              <p class="card-text small flex-grow-1">
+                Built an e-commerce platform where users can browse and purchase PC parts,
+                add items to a basket and wishlist, leave reviews, and receive email receipts
+                after successful payment via Stripe/PayPal.
+              </p>
+              <p class="small mb-2"><strong>Role:</strong> Designed the checkout flow and helped add products to the
+                site.</p>
+              <p class="small mb-3">
+                <strong>Tech stack:</strong> HTML, CSS, Python (Django), PyTest, Stripe
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blazor TV Show Explorer -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Blazor TV Show Explorer</h5>
+              <h6 class="card-subtitle text-muted mb-2">Year 4 &ndash; C# / .NET Assignment</h6>
+              <p class="card-text small flex-grow-1">
+                Blazor WebAssembly single-page app that uses the TVMaze API to search and explore TV shows.
+                Includes search by name, filtering by genre and rating, detailed show pages, and
+                personal Favourites/Watchlist stored in the browser.
+              </p>
+              <p class="small mb-3">
+                <strong>Tech stack:</strong> C#, ASP.NET Core Blazor WASM, Bootstrap, TVMaze API, Playwright,
+                GitHub Actions, Azure Static Web Apps
+              </p>
+              <div class="mt-auto">
+                <a href="https://gray-plant-018db4303.3.azurestaticapps.net/" class="btn btn-sm btn-primary me-2"
+                  target="_blank" rel="noopener">
+                  View Live Site
+                </a>
+                <a href="https://github.com/yonko-smurk/BLAZORCA3_X00190880" class="btn btn-sm btn-primary"
+                  target="_blank" rel="noopener">
+                  View Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Final Year Project -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">AI Tech Support Management System</h5>
+              <h6 class="card-subtitle text-muted mb-2">Year 4 &ndash; Final Year Project (In Progress)</h6>
+              <p class="card-text small flex-grow-1">
+                Building an AI-powered tech support management platform for TU Dublin.
+                The system integrates ticketing, live chat, and analytics, using Retrieval-Augmented
+                Generation (RAG) with OpenAI and pgvector to assist with support requests.
+              </p>
+              <p class="small mb-3">
+                <strong>Tech stack:</strong> Python, Django, PostgreSQL (pgvector), Redis, Tailwind CSS,
+                OpenAI API, Docker
+              </p>
+              <p class="small mb-0">
+                <em>Deployed version and source code links will be added when the project is completed.</em>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div> <!-- row -->
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="py-5 bg-light section-shell">
+    <div class="container">
+      <h2 class="mb-4 section-heading"><i class="bi bi-briefcase me-2 align-middle" aria-hidden="true"></i>Work Experience</h2>
+
+      <div class="accordion experience-accordion" id="experienceAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="experienceHeadingSap">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#experienceCollapseSap"
+              aria-expanded="false"
+              aria-controls="experienceCollapseSap"
+            >
+              <div class="experience-header">
+                <span class="company-logo">
+                  <img src="OIP.jpg" alt="SAP logo" loading="lazy" decoding="async" />
+                </span>
+                <div class="experience-meta">
+                  <h5 class="card-title mb-1">Cloud Support Engineer Intern</h5>
+                  <p class="card-subtitle text-muted mb-0">SAP Ireland &bull; Placement Year</p>
+                </div>
+              </div>
+            </button>
+          </h2>
+          <div
+            id="experienceCollapseSap"
+            class="accordion-collapse collapse"
+            aria-labelledby="experienceHeadingSap"
+            data-bs-parent="#experienceAccordion"
+          >
+            <div class="accordion-body">
+              <ul class="small mb-0">
+                <li>Investigated and resolved customer incidents on cloud-based services, working with logs, monitoring
+                  tools, and containerised environments.</li>
+                <li>Collaborated with global teams to troubleshoot production issues and improve service reliability.</li>
+                <li>Used tools such as Docker, Kubernetes, Dynatrace, and OpenSearch in a real-world DevOps setting.</li>
+                <li>Documented solutions and contributed to internal knowledge for future incident handling.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="experienceHeadingBidvest">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#experienceCollapseBidvest"
+              aria-expanded="false"
+              aria-controls="experienceCollapseBidvest"
+            >
+              <div class="experience-header">
+                <span class="company-logo">
+                  <img
+                    src="Bidvest-Noonan-Logo-Square-1534x1536.png"
+                    alt="Bidvest Noonan logo"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </span>
+                <div class="experience-meta">
+                  <h5 class="card-title mb-1">Security Officer &ndash; Data Centre</h5>
+                  <p class="card-subtitle text-muted mb-0">Bidvest Noonan &bull; Part-time</p>
+                </div>
+              </div>
+            </button>
+          </h2>
+          <div
+            id="experienceCollapseBidvest"
+            class="accordion-collapse collapse"
+            aria-labelledby="experienceHeadingBidvest"
+            data-bs-parent="#experienceAccordion"
+          >
+            <div class="accordion-body">
+              <ul class="small mb-0">
+                <li>Controlled access to secure data-centre areas, verifying staff, contractors and visitors using ID and
+                  badge systems.</li>
+                <li>Monitored CCTV, alarms and building management systems, escalating unusual activity to engineers and
+                  site management.</li>
+                <li>Followed strict security procedures for patrols, incident handling and emergency response in a 24/7
+                  critical environment.</li>
+                <li>Logged incidents and shift handovers in detailed reports to support audits and compliance requirements.</li>
+                <li>Worked closely with facilities and operations teams to maintain a safe, compliant environment for
+                  technical staff.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- You can add other roles here later if you want -->
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="py-5 section-shell">
+    <div class="container">
+      <h2 class="mb-4 section-heading"><i class="bi bi-award me-2 align-middle" aria-hidden="true"></i>Skills &amp; Achievements</h2>
+
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <h5>Technical Skills</h5>
+          <ul class="small">
+            <li><strong>Languages &amp; frameworks:</strong> Java, Python, C#, SQL, HTML/CSS, Django, .NET</li>
+            <li><strong>Web &amp; application development:</strong> Full-stack web apps with Django and Blazor</li>
+            <li><strong>Cloud &amp; DevOps:</strong> Docker, Kubernetes, Azure, AWS, CI/CD pipelines, Terraform</li>
+            <li><strong>Databases:</strong> SQL, Azure SQL, PostgreSQL</li>
+            <li><strong>Testing &amp; automation:</strong> PyTest, Selenium, JMeter, Playwright, SonarQube,
+              security/dependency scanning</li>
+            <li><strong>Monitoring &amp; diagnostics:</strong> Dynatrace, OpenSearch, Kibana, Linux CLI</li>
+          </ul>
+          <h5 class="mt-4">Key Strengths</h5>
+          <ul class="small">
+            <li>Strong troubleshooting mindset and attention to detail.</li>
+            <li>Comfortable working in cross-functional and global teams.</li>
+            <li>Experience working under SLAs and taking ownership of incidents.</li>
+            <li>Good communication with both technical and non-technical stakeholders.</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-6">
+          <!-- Skill bars -->
+          <div class="mt-3">
+            <div class="mb-2">
+              <div class="d-flex justify-content-between small">
+                <span>Python / Django</span><span>Advanced</span>
+              </div>
+              <div class="progress rounded-pill" role="progressbar" aria-label="Python / Django skill level"
+                aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar rounded-pill" style="width: 0%" data-skill-target="85"></div>
+              </div>
+            </div>
+            <div class="mb-2">
+              <div class="d-flex justify-content-between small">
+                <span>C# / .NET / Blazor</span><span>Intermediate</span>
+              </div>
+              <div class="progress rounded-pill" role="progressbar" aria-label="C# / .NET / Blazor skill level"
+                aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar rounded-pill" style="width: 0%" data-skill-target="70"></div>
+              </div>
+            </div>
+            <div class="mb-2">
+              <div class="d-flex justify-content-between small">
+                <span>Cloud &amp; DevOps</span><span>Intermediate</span>
+              </div>
+              <div class="progress rounded-pill" role="progressbar" aria-label="Cloud &amp; DevOps skill level"
+                aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar rounded-pill" style="width: 0%" data-skill-target="75"></div>
+              </div>
+            </div>
+            <div>
+              <div class="d-flex justify-content-between small">
+                <span>Web Development (HTML/CSS/JS)</span><span>Intermediate</span>
+              </div>
+              <div class="progress rounded-pill" role="progressbar" aria-label="Web Development skill level"
+                aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar rounded-pill" style="width: 0%" data-skill-target="80"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- row -->
+    </div>
+  </section>
+
+  <!-- HOBBIES -->
+  <section id="hobbies" class="py-5 bg-light section-shell">
+    <div class="container">
+      <h2 class="mb-4 section-heading"><i class="bi bi-heart me-2 align-middle" aria-hidden="true"></i>Hobbies &amp; Interests</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="border rounded p-3 h-100 hobby-card">
+            <h5 class="hobby-title">
+              <span class="hobby-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 2l7 4v6c0 5-3 9-7 10-4-1-7-5-7-10V6l7-4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                  <path d="M9.5 12l1.7 1.7L14.8 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              Brazilian Jiu Jitsu
+            </h5>
+            <p class="small mb-0">
+              Training in BJJ helps me stay disciplined, focused, and resilient skills that also
+              translate into how I approach debugging and problem-solving.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="border rounded p-3 h-100 hobby-card">
+            <h5 class="hobby-title">
+              <span class="hobby-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M7.8 10h8.4c2.2 0 4 1.8 4 4v2.2c0 1.1-.9 2-2 2h-1.3l-2-2H9.1l-2 2H5.8c-1.1 0-2-.9-2-2V14c0-2.2 1.8-4 4-4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                  <path d="M8.2 14.5h3.2M9.8 12.9v3.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  <path d="M15.8 13.6h.01M17.6 15.4h.01" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                </svg>
+              </span>
+              Video Games
+            </h5>
+            <p class="small mb-0">
+              I enjoy strategy and competitive games, which sharpen my pattern recognition,
+              decision-making, and teamwork skills.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="border rounded p-3 h-100 hobby-card">
+            <h5 class="hobby-title">
+              <span class="hobby-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v5a3 3 0 0 0 3 3z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  <path d="M7 11a5 5 0 0 0 10 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  <path d="M12 16v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  <path d="M9.5 20h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+              </span>
+              Podcasts
+            </h5>
+            <p class="small mb-0">
+              I listen to podcasts on technology, productivity, and personal development to keep
+              learning outside the classroom.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-5 section-shell">
+    <div class="container">
+      <h2 class="mb-4 section-heading"><i class="bi bi-envelope me-2 align-middle" aria-hidden="true"></i>Contact</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-lg-8 col-xl-7 contact-info">
+          <h5>Get in touch</h5>
+          <p class="small">
+            I'm open to graduate roles, internships, and interesting projects in software development,
+            DevOps, and cloud engineering.
+          </p>
+          <ul class="list-unstyled small mb-3 contact-list">
+            <li><strong>Email:</strong> <a href="mailto:F.mudashiru5011@gmail.com">F.mudashiru5011@gmail.com</a></li>
+            <li><strong>Location:</strong> Dublin, Ireland</li>
+            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/fuad-mudashiru-tud/" target="_blank"
+                rel="noopener">linkedin.com/in/fuad-mudashiru-tud</a></li>
+          </ul>
+          <button type="button" class="btn btn-outline-primary contact-cta" data-bs-toggle="modal"
+            data-bs-target="#contactModal">
+            Open contact details
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-3 bg-dark text-light">
+    <div
+      class="container d-flex justify-content-between align-items-center gap-2 flex-column flex-md-row text-center text-md-start">
+      <small>&copy; <span id="currentYear"></span> Fuad Mudashiru. All rights reserved.</small>
+      <a href="#hero" class="small text-decoration-none text-light">Back to top</a>
+    </div>
+  </footer>
+
+  <!-- Back-to-top floating button  -->
+  <button id="backToTop" class="btn btn-primary position-fixed d-none rounded-circle"
+    style="bottom: 1.5rem; right: 1.5rem;">
+    &uarr;
+  </button>
+
+  <!-- CONTACT MODAL -->
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contactModalLabel">Contact Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-1"><strong>Name:</strong> Fuad Mudashiru</p>
+          <p class="mb-1"><strong>Email:</strong> <a
+              href="mailto:F.mudashiru5011@gmail.com">F.mudashiru5011@gmail.com</a></p>
+          <p class="mb-1"><strong>Location:</strong> Dublin, Ireland</p>
+          <p class="mb-1"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/fuad-mudashiru-tud/"
+              target="_blank" rel="noopener">linkedin.com/in/fuad-mudashiru-tud</a></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS + custom JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
