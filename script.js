@@ -56,9 +56,8 @@ function setupBackToTop() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 }
-
 /**
- * Closes the mobile offcanvas menu after a nav link click,
+ * iit loses the mobile offcanvas menu after a nav link click
  * without breaking in-page anchor navigation.
  */
 function setupOffcanvasNav() {
